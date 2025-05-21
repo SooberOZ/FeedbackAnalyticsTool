@@ -15,7 +15,7 @@ using IDbConnection db = new SqliteConnection(connectionString);
 DbInitializer.Initialize(db);
 
 Console.WriteLine("📥 Імпорт даних із CSV...");
-CsvImporter.ImportFeedbackFromCsv(db, "feedback.csv");
+CsvImporter.ImportFeedbackFromCsv(db, "feedback.csv"); // Потрібно вказувати повний шлях файлу
 
 Console.WriteLine("Введіть назву проекту для розрахунку середньої оцінки: ");
 var input = Console.ReadLine();
